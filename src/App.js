@@ -1,17 +1,9 @@
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
-import ggl from 'graphql-tag'
 import { Query } from 'react-apollo'
 import client from './client'
+import { ME } from './graphql'
 
-const ME = ggl`
-	query me {
-		user(login:"iteachonudemy"){
-			name
-			avatarUrl
-		}
-	}
-`
 class App extends React.Component  {
 	render() {
   return(
